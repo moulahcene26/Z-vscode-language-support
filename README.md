@@ -19,9 +19,10 @@ Just open any `.alg` file, and you'll get highlighting and support.
 
 Don't tell Mr Zegour About this XD
 
-
+# Experimental compiler 
+    https://github.com/moulahcene26/Z-compiler-experimental
 
 ## Author
 Moulahene Abdelmounaim 2025 — [GitHub](https://github.com/moulahcene26)
-
+ig : @blorf26
 0.1.0
