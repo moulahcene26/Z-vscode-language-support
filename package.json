@@ -3,7 +3,7 @@
   "publisher": "moulahcene26",
   "displayName": "Z Language Support (ESI)",
   "description": "Z Language support: syntax highlighting and more",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "engines": {
     "vscode": "^1.70.0"
   },
@@ -21,7 +21,11 @@
         "extensions": [
           ".alg"
         ],
-        "configuration": "./language-configuration.json"
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "./fileicons/icons/z.svg",
+          "dark": "./fileicons/icons/z.svg"
+        }
       }
     ],
     "grammars": [
@@ -31,13 +35,11 @@
         "path": "./syntaxes/z.tmLanguage.json"
       }
     ],
-    "fileAssociations": [
+    "iconThemes": [
       {
-        "language": "zlang",
-        "extensions": [
-          ".alg"
-        ],
-        "icon": "./fileicons/z-icon.png"
+        "id": "z-file-icon",
+        "label": "Z Language File Icons",
+        "path": "./fileicons/z-icon-theme.json"
       }
     ]
   },

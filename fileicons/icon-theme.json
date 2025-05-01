@@ -1,21 +1,13 @@
 {
     "iconDefinitions": {
-      "file-alg": {
-        "iconPath": "./icons/Z.svg"
+      "z-file": {
+        "iconPath": "./icon/z.svg"
       }
     },
     "fileExtensions": {
-      "alg": "file-alg"
+      "alg": "z-file"
     },
-    "light": {
-      "fileExtensions": {
-        "alg": "file-alg"
-      }
-    },
-    "dark": {
-      "fileExtensions": {
-        "alg": "file-alg"
-      }
+    "languageIds": {
+      "zlang": "z-file"
     }
   }
-  

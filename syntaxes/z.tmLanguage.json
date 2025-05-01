@@ -4,34 +4,50 @@
 	"patterns": [
 	  {
 		"name": "keyword.control.zlang",
-		"match": "\\b(SOIENT|DEBUT|FIN|ACTION|FONCTION|SI|SINON|FSI|TQ|FTQ|POUR|FPOUR|APPEL|ECRIRE|LIRE|CREER_LISTE|CREER_FILE|EMPILER|DEPILER|ENFILER|DEFILER|AFF_VAL|AFF_ADR|VALEUR|SUIVANT|PILEVIDE|FILEVIDE)\\b"
+		"match": "\\b(SOIENT|DEBUT|FIN|ACTION|FONCTION|SI|SINON|FSI|TANTQUE|FINTANTQUE|TQ|FTQ|POUR|FPOUR|FINPOUR|APPEL|ECRIRE|LIRE|SINON|FSI|CREERNOEUD|LIBERERNOEUD|AFF_FG|AFF_FD|AFF_PERE|AFF_INFO|AFF_STRUCT|AFF_VAL|AFF_ADR|ALLOUER|LIBERER|EMPILER|DEPILER|ENFILER|DEFILER|CREERLISTE|ALEANOMBRE)\\b"
 	  },
 	  {
 		"name": "storage.type.zlang",
-		"match": "\\b(ENTIER|BOOLEEN|CAR|CHAINE|LISTE|PILE|FILE|STRUCTURE|VECTEUR|ARB|ARM)\\b"
+		"match": "\\b(ENTIER|BOOLEEN|CAR|CHAINE|LISTE|PILE|FILE|STRUCTURE|VECTEUR|ARB|ARM|DE|VERS|UNE)\\b"
 	  },
 	  {
-		"name": "constant.language.boolean.zlang",
-		"match": "\\b(VRAI|FAUX|NON)\\b"
+		"name": "constant.language.zlang",
+		"match": "\\b(VRAI|FAUX|NIL|NON)\\b"
 	  },
 	  {
-		"name": "comment.line.zlang",
-		"match": "--.*$"
+		"name": "comment.block.zlang",
+		"begin": "/\\*",
+		"end": "\\*/"
 	  },
 	  {
-		"name": "string.quoted.double.zlang",
-		"begin": "\"",
-		"end": "\""
+		"name": "string.quoted.single.zlang",
+		"begin": "'",
+		"end": "'"
 	  },
 	  {
-		"name": "variable.other.zlang",
-		"match": "\\b[A-Z][a-zA-Z0-9_]*\\b"
+		"name": "variable.parameter.zlang",
+		"match": "\\b[A-Za-z][A-Za-z0-9_]*\\b"
 	  },
 	  {
 		"name": "entity.name.function.zlang",
-		"match": "\\b[A-Z][a-zA-Z0-9_]*\\s*(?=\\()"
+		"match": "\\b[A-Za-z][A-Za-z0-9_]*\\s*(?=\\()"
+	  },
+	  {
+		"name": "keyword.operator.zlang",
+		"match": "(:=|<>|<|>|<=|>=|#|=|\\+|-|\\*|/|ET|OU)"
+	  },
+	  {
+		"name": "support.function.zlang",
+		"match": "\\b(VALEUR|SUIVANT|STRUCT|INFO|FG|FD|PERE|PILEVIDE|FILEVIDE)\\b"
+	  },
+	  {
+		"name": "constant.numeric.zlang",
+		"match": "\\b\\d+\\b"
+	  },
+	  {
+		"name": "punctuation.section.zlang",
+		"match": "[\\(\\)\\[\\]\\{\\}\\,\\;]"
 	  }
 	],
 	"repository": {}
   }
-  

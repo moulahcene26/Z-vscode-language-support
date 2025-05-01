@@ -1,16 +1,18 @@
 const vscode = require('vscode');
 
+/**
+ * @param {vscode.ExtensionContext} context
+ */
 function activate(context) {
-  // No need to change icon theme - file associations in package.json handle this
+    // This function is called when your extension is activated
+    console.log('Z Language Support extension is now active!');
 }
 
-vscode.window.showInformationMessage(
-    'Z Language Support updated! Check out the new features!',
-    'Learn More'
- ).then(selection => {
-    if (selection === 'Learn More') {
-       vscode.env.openExternal(vscode.Uri.parse('https://github.com/moulahcene26/Z-vscode-language-support/releases'));
-    }
- });
- 
-exports.activate = activate;
+function deactivate() {
+    // This function is called when your extension is deactivated
+}
+
+module.exports = {
+    activate,
+    deactivate
+};
