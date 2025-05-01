@@ -1,0 +1,21 @@
+{
+    "iconDefinitions": {
+      "file-alg": {
+        "iconPath": "./icons/Z.svg"
+      }
+    },
+    "fileExtensions": {
+      "alg": "file-alg"
+    },
+    "light": {
+      "fileExtensions": {
+        "alg": "file-alg"
+      }
+    },
+    "dark": {
+      "fileExtensions": {
+        "alg": "file-alg"
+      }
+    }
+  }
+  

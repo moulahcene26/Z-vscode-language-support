@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Just the stylized Z letter in dark blue -->
+  <path d="M40 40 
+           L160 40 
+           L160 70
+           L100 130
+           L160 130
+           L160 160
+           L40 160
+           L40 130
+           L100 70
+           L40 70
+           Z" 
+        fill="#003366" />
+</svg>

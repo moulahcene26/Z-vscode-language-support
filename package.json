@@ -1,9 +1,10 @@
 {
-  "name": "zlang",
+  "name": "zlang-support",
   "publisher": "moulahcene26",
   "displayName": "Z Language Support (ESI)",
   "description": "Z Language support: syntax highlighting and more",
-  "version": "0.0.1",
+  "version": "0.0.2",  
+
   "engines": {
     "vscode": "^1.70.0"
   },
@@ -25,8 +26,17 @@
         "scopeName": "source.alg",
         "path": "./syntaxes/z.tmLanguage.json"
       }
-    ]
+    ],
+    "iconThemes": [
+    {
+      "id": "zlang-icons",
+      "label": "Z Language Icons",
+      "path": "./fileicons/icon-theme.json"
+    }
+  ]
   },
+  "activationEvents": ["onStartupFinished"],
+"main": "./extension.js",
   "scripts": {
     "compile": "tsc"
   },
