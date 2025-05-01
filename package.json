@@ -1,6 +1,6 @@
 {
   "name": "zlang",
-  "displayName": "z-language-support",
+  "displayName": "Z Language Support (ESI)",
   "description": "Z Language support: syntax highlighting and more",
   "version": "0.0.1",
   "engines": {
@@ -28,5 +28,14 @@
   },
   "scripts": {
     "compile": "tsc"
-  }
+  },
+  "icon": "icon.png",
+  "author": {
+  "name": "Moulahene Abdelmounaim",
+  "email": "oa_moulahcene@esi.dz"
+},
+"repository": {
+  "type": "git",
+  "url": "https://github.com/moulahcene26/Z-vscode-language-support"
+}
 }
