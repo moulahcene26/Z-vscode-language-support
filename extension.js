@@ -1,20 +1,9 @@
 const vscode = require('vscode');
 
 function activate(context) {
-  const config = vscode.workspace.getConfiguration('workbench');
-  const currentTheme = config.get('iconTheme');
-
-  if (currentTheme !== 'zlang-icons') {
-    vscode.window.showInformationMessage(
-      'Enable Z icon theme for .alg files?',
-      'Enable'
-    ).then(selection => {
-      if (selection === 'Enable') {
-        config.update('iconTheme', 'zlang-icons', true);
-      }
-    });
-  }
+  // No need to change icon theme - file associations in package.json handle this
 }
+
 vscode.window.showInformationMessage(
     'Z Language Support updated! Check out the new features!',
     'Learn More'
@@ -24,5 +13,4 @@ vscode.window.showInformationMessage(
     }
  });
  
-
 exports.activate = activate;
