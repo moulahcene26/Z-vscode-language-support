@@ -15,5 +15,14 @@ function activate(context) {
     });
   }
 }
+vscode.window.showInformationMessage(
+    'Z Language Support updated! Check out the new features!',
+    'Learn More'
+ ).then(selection => {
+    if (selection === 'Learn More') {
+       vscode.env.openExternal(vscode.Uri.parse('https://github.com/moulahcene26/Z-vscode-language-support/releases'));
+    }
+ });
+ 
 
 exports.activate = activate;
