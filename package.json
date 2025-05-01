@@ -39,7 +39,7 @@
       {
         "id": "z-file-icon",
         "label": "Z Language File Icons",
-        "path": "./fileicons/z-icon-theme.json"
+        "path": "./fileicons/icon-theme.json"
       }
     ]
   },

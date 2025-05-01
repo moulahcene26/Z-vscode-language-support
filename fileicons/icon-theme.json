@@ -1,7 +1,7 @@
 {
     "iconDefinitions": {
       "z-file": {
-        "iconPath": "./icon/z.svg"
+        "iconPath": "./icons/z.svg"
       }
     },
     "fileExtensions": {
