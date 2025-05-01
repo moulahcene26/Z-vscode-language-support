@@ -4,25 +4,29 @@
   "description": "Z Language support: syntax highlighting and more",
   "version": "0.0.1",
   "engines": {
-    "vscode": "^1.99.0"
+    "vscode": "^1.70.0"
   },
   "categories": [
     "Programming Languages"
   ],
   "contributes": {
-  "languages": [
-    {
-      "id": "zlang",
-      "aliases": ["Z", "zlang"],
-      "extensions": [".alg"],
-      "configuration": "./language-configuration.json"
-    }
-  ],
-  "grammars": [
-    {
-      "language": "zlang",
-      "scopeName": "source.alg",
-      "path": "./syntaxes/z.tmLanguage.json"
-    }]
+    "languages": [
+      {
+        "id": "zlang",
+        "aliases": ["Z", "zlang"],
+        "extensions": [".alg"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "zlang",
+        "scopeName": "source.alg",
+        "path": "./syntaxes/z.tmLanguage.json"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc"
   }
 }
