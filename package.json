@@ -10,15 +10,18 @@
     "Programming Languages"
   ],
   "contributes": {
-    "languages": [{
-      "id": "z",
-      "aliases": ["Z", "z"],
+  "languages": [
+    {
+      "id": "zlang",
+      "aliases": ["Z", "zlang"],
       "extensions": [".alg"],
       "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "z",
-      "scopeName": "source.z",
+    }
+  ],
+  "grammars": [
+    {
+      "language": "zlang",
+      "scopeName": "source.alg",
       "path": "./syntaxes/z.tmLanguage.json"
     }]
   }

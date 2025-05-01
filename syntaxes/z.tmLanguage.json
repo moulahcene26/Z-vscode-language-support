@@ -1,32 +1,37 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "Z",
+	"scopeName": "source.alg",
+	"name": "Z Language",
 	"patterns": [
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
-		}
+	  {
+		"name": "keyword.control.zlang",
+		"match": "\\b(SOIENT|DEBUT|FIN|ACTION|FONCTION|SI|SINON|FSI|TQ|FTQ|POUR|FPOUR|APPEL|ECRIRE|LIRE|CREER_LISTE|CREER_FILE|EMPILER|DEPILER|ENFILER|DEFILER|AFF_VAL|AFF_ADR|VALEUR|SUIVANT|PILEVIDE|FILEVIDE)\\b"
+	  },
+	  {
+		"name": "storage.type.zlang",
+		"match": "\\b(ENTIER|BOOLEEN|CAR|CHAINE|LISTE|PILE|FILE|STRUCTURE|VECTEUR|ARB|ARM)\\b"
+	  },
+	  {
+		"name": "constant.language.boolean.zlang",
+		"match": "\\b(VRAI|FAUX|NON)\\b"
+	  },
+	  {
+		"name": "comment.line.zlang",
+		"match": "--.*$"
+	  },
+	  {
+		"name": "string.quoted.double.zlang",
+		"begin": "\"",
+		"end": "\""
+	  },
+	  {
+		"name": "variable.other.zlang",
+		"match": "\\b[A-Z][a-zA-Z0-9_]*\\b"
+	  },
+	  {
+		"name": "entity.name.function.zlang",
+		"match": "\\b[A-Z][a-zA-Z0-9_]*\\s*(?=\\()"
+	  }
 	],
-	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.z",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.z",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.z",
-					"match": "\\\\."
-				}
-			]
-		}
-	},
-	"scopeName": "source.z"
-}
+	"repository": {}
+  }
+  
