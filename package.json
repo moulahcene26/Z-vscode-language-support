@@ -31,11 +31,11 @@
         "path": "./syntaxes/z.tmLanguage.json"
       }
     ],
-    "iconThemes": [
+    "fileAssociations": [
       {
-        "id": "zlang-icons",
-        "label": "Z Language Icons",
-        "path": "./fileicons/icon-theme.json"
+        "language": "zlang",
+        "extensions": [".alg"],
+        "icon": "./fileicons/z-icon.png"
       }
     ]
   },
