@@ -3,8 +3,7 @@
   "publisher": "moulahcene26",
   "displayName": "Z Language Support (ESI)",
   "description": "Z Language support: syntax highlighting and more",
-  "version": "0.0.3",  
-
+  "version": "0.0.4",
   "engines": {
     "vscode": "^1.70.0"
   },
@@ -15,8 +14,13 @@
     "languages": [
       {
         "id": "zlang",
-        "aliases": ["Z", "zlang"],
-        "extensions": [".alg"],
+        "aliases": [
+          "Z",
+          "zlang"
+        ],
+        "extensions": [
+          ".alg"
+        ],
         "configuration": "./language-configuration.json"
       }
     ],
@@ -28,26 +32,27 @@
       }
     ],
     "iconThemes": [
-    {
-      "id": "zlang-icons",
-      "label": "Z Language Icons",
-      "path": "./fileicons/icon-theme.json"
-    }
-  ]
+      {
+        "id": "zlang-icons",
+        "label": "Z Language Icons",
+        "path": "./fileicons/icon-theme.json"
+      }
+    ]
   },
-  "activationEvents": ["onStartupFinished"],
-"main": "./extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./extension.js",
   "scripts": {
     "compile": "tsc"
   },
   "icon": "icon.png",
-  
   "author": {
-  "name": "Moulahene Abdelmounaim",
-  "email": "oa_moulahcene@esi.dz"
-},
-"repository": {
-  "type": "git",
-  "url": "https://github.com/moulahcene26/Z-vscode-language-support"
-}
+    "name": "Moulahene Abdelmounaim",
+    "email": "oa_moulahcene@esi.dz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moulahcene26/Z-vscode-language-support"
+  }
 }
