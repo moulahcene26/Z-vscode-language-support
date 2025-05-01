@@ -24,3 +24,4 @@ Don't tell Mr Zegour About this XD
 ## Author
 Moulahene Abdelmounaim 2025 — [GitHub](https://github.com/moulahcene26)
 
+0.0.6
