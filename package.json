@@ -1,5 +1,6 @@
 {
   "name": "zlang",
+  "publisher": "moulahcene26",
   "displayName": "Z Language Support (ESI)",
   "description": "Z Language support: syntax highlighting and more",
   "version": "0.0.1",
@@ -30,6 +31,7 @@
     "compile": "tsc"
   },
   "icon": "icon.png",
+  
   "author": {
   "name": "Moulahene Abdelmounaim",
   "email": "oa_moulahcene@esi.dz"
