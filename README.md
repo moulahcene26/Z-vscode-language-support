@@ -17,7 +17,7 @@ This extension adds syntax highlighting and basic language support for the Z pro
 
 Just open any `.alg` file, and you'll get highlighting and support.
 
-Don't tell Mr Zegour About this XD
+
 
 # Experimental compiler 
     https://github.com/moulahcene26/Z-compiler-experimental
