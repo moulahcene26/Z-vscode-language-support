@@ -27,20 +27,52 @@
 		"match": "//.*$"
 	  },
 	  {
+		"name": "keyword.declaration.var.zlang",
+		"match": "\\b(SOIT|SOIENT|LET)\\b"
+	  },
+	  {
+		"name": "storage.modifier.type.zlang",
+		"match": "\\b(UN|UNE|DES)\\b"
+	  },
+	  {
+		"name": "keyword.control.flow.zlang",
+		"match": "\\b(IF|ELSE|ENDIF|SI|SINON|FSI|WHILE|ENDWHILE|WH|EWH|TANTQUE|FTQ|TQ|FOR|ENDFOR|EFOR|POUR|FINPOUR|FPOUR)\\b"
+	  },
+	  {
 		"name": "keyword.control.zlang",
-		"match": "\\b(IF|ELSE|ENDIF|SI|SINON|FSI|WHILE|ENDWHILE|WH|EWH|TANTQUE|FTQ|TQ|FOR|ENDFOR|EFOR|POUR|FINPOUR|FPOUR|CALL|APPEL|BEGIN|END|DEBUT|FIN|LET)\\b"
+		"match": "\\b(CALL|APPEL|BEGIN|END|DEBUT|FIN|LET)\\b"
 	  },
 	  {
-		"name": "keyword.declaration.zlang",
-		"match": "\\b(ACTION|ACTIONS|FUNCTION|FUNCTIONS|FONCTION|FONCTIONS|POINTER|TO|VERS|OF|DE|STRUCTURE|STRUCTURES|ARRAY|ARRAYS|TABLEAU|TABLEAUX|LIST|LISTS|LISTE|LISTES|BILIST|QUEUE|QUEUES|FILE|FILES|STACK|STACKS|PILE|PILES|BST|MST|HEADER|BUFFER|DYNAMIC|SOIT|SOIENT|ARB|VECTEUR|VECTEURS|UN|UNE|DES)\\b"
+		"name": "storage.type.structure.zlang",
+		"match": "\\b(STRUCTURE|STRUCTURES)\\b"
 	  },
 	  {
-		"name": "storage.type.zlang",
-		"match": "\\b(INTEGER|INTEGERS|ENTIER|ENTIERS|BOOLEAN|BOOLEANS|BOOLEEN|BOOLEENS|CHAR|CHARACTER|CHARACTERS|CAR|STRING|STRINGS|CHAINE|CHAINES|POINTEUR|LISTE|PILE|FILE)\\b"
+		"name": "keyword.declaration.pointer.zlang",
+		"match": "\\b(POINTER|VERS|TO|POINTEUR)\\b"
 	  },
 	  {
-		"name": "constant.language.zlang",
-		"match": "\\b(TRUE|FALSE|VRAI|FAUX|NULL|NIL)\\b"
+		"name": "storage.type.collection.zlang",
+		"match": "\\b(ARRAY|ARRAYS|TABLEAU|TABLEAUX|LIST|LISTS|LISTE|LISTES|BILIST|QUEUE|QUEUES|FILE|FILES|STACK|STACKS|PILE|PILES|VECTEUR|VECTEURS)\\b"
+	  },
+	  {
+		"name": "storage.type.tree.zlang",
+		"match": "\\b(BST|MST|ARB|HEADER|BUFFER|DYNAMIC)\\b"
+	  },
+	  {
+		"name": "storage.modifier.of.zlang",
+		"match": "\\b(OF|DE)\\b"
+	  },
+	  {
+		"name": "storage.type.primitive.zlang",
+		"match": "\\b(INTEGER|INTEGERS|ENTIER|ENTIERS|BOOLEAN|BOOLEANS|BOOLEEN|BOOLEENS|CHAR|CHARACTER|CHARACTERS|CAR|STRING|STRINGS|CHAINE|CHAINES)\\b"
+	  },
+	  {
+		"name": "constant.language.boolean.zlang",
+		"match": "\\b(TRUE|FALSE|VRAI|FAUX)\\b"
+	  },
+	  {
+		"name": "constant.language.null.zlang",
+		"match": "\\b(NULL|NIL)\\b"
 	  },
 	  {
 		"name": "keyword.operator.assignment.zlang",
@@ -63,12 +95,16 @@
 		"match": "\\b(MOD|MAX|MIN|EXP|RANDNUMBER|RANDSTRING|ALEANUMBER|ALEACHAINE|ALEANOMBRE|CHARACT|LENTHSTRING|STRINGLENGTH|HAUTEUR|HEIGHT)\\b"
 	  },
 	  {
-		"name": "support.function.highlevel.zlang",
-		"match": "\\b(CREATE_LIST|CREATE_BILIST|CREATE_STACK|CREATE_QUEUE|CREER_QUEUE|CREATE_BST|CREATE_MST|CREATE_FILE|CREATE_ARB|CREATE_ARM|CREATE_PILE|INIT_STRUCT|INIT_ARRAY|INIT_VECT|CREATE-LISTE|CREER_LISTE|CREER_LISTEBI|CREER_ARB|CREER_ARM|CREER_PILE|CREERFILE|INIT_TAB|ALLOCATE|ALLOUER|CREERNOEUD|createlist|FREE_TREE|FREE_LIST|FREE_STACK|APPEND|GEN_BST|LIST_INORDER|VERIF_BST|RESETVISITED|COPYBST|PRINTGIVENLEVELDG|PRINTGIVENLEVELGD|DELETEGIVENLEVELDG|DELETEGIVENLEVELGD|NODES_LIST_LR|NODES_LIST_RL|COMPARE_LISTS|TOP1)\\b"
+		"name": "keyword.declaration.function.zlang",
+		"match": "\\b(ACTION|ACTIONS|FUNCTION|FUNCTIONS|FONCTION|FONCTIONS)\\b"
 	  },
 	  {
 		"name": "support.function.adt.zlang",
 		"match": "\\b(ADD|RAJOUTER|ALLOCATE_CELL|ALLOCATE_NODE|ALLOC_ARRAY|ALLOC_BLOCK|ALLOC_STRUCT|FREE|LIBERER|FREE_ARRAY|LIBER_TAB|FREE_NODE|LIBERERNOEUD|FREE_STRUCT|LIBER_STRUCT|CELL_VALUE|VALUE|VALEUR|NEXT|SUIVANT|PREVIOUS|PRECEDENT|ASS_ADR|AFF_ADR|ASS_VAL|AFF_VAL|ASS_L_ADR|AFF_ADRG|ASS_R_ADR|AFF_ADRD|PUSH|EMPILER|POP|DEPILER|EMPTY_STACK|PILEVIDE|CREATESTACK|CREERPILE|ENQUEUE|ENFILER|DEQUEUE|DEFILER|EMPTY_QUEUE|FILEVIDE|CREATEQUEUE|LC|FG|RC|FD|PARENT|PERE|NODE_VALUE|INFO|ASS_LC|AFF_FG|ASS_RC|AFF_FD|ASS_PARENT|AFF_PERE|ASS_NODE_VAL|AFF_INFO|CHILD|FILS|NODE_VALUE_MST|INFOR|ASS_CHILD|AFF_FILS|ASS_NODE_VAL_MST|AFF_INFOR|DEGREE|DEGRE|ASS_DEGREE|AFF_DEGRE|AFF_PARENT|ELEMENT|ASS_ELEMENT|AFF_ELEMENT|STRUCT|ASS_STRUCT|AFF_STRUCT|OPEN|OUVRIR|CLOSE|FERMER|READSEQ|LIRESEQ|WRITESEQ|ECRIRESEQ|READDIR|LIREDIR|WRITEDIR|ECRIREDIR|ENDFILE|FINFICH|ALLOC_BLOCK|ALLOC_BLOC|ASS_HEADER|AFF_ENTETE|HEADSEQ)\\b"
+	  },
+	  {
+		"name": "support.function.highlevel.zlang",
+		"match": "\\b(CREATE_LIST|CREATE_BILIST|CREATE_STACK|CREATE_QUEUE|CREER_QUEUE|CREATE_BST|CREATE_MST|CREATE_FILE|CREATE_ARB|CREATE_ARM|CREATE_PILE|INIT_STRUCT|INIT_ARRAY|INIT_VECT|CREATE-LISTE|CREER_LISTE|CREER_LISTEBI|CREER_ARB|CREER_ARM|CREER_PILE|CREERFILE|INIT_TAB|ALLOCATE|ALLOUER|CREERNOEUD|createlist|FREE_TREE|FREE_LIST|FREE_STACK|APPEND|GEN_BST|LIST_INORDER|VERIF_BST|RESETVISITED|COPYBST|PRINTGIVENLEVELDG|PRINTGIVENLEVELGD|DELETEGIVENLEVELDG|DELETEGIVENLEVELGD|NODES_LIST_LR|NODES_LIST_RL|COMPARE_LISTS|TOP1)\\b"
 	  },
 	  {
 		"name": "keyword.io.zlang",
@@ -77,7 +113,7 @@
 	  {
 		"begin": "\\b(FUNCTION|FONCTION)\\s+([A-Za-z_][A-Za-z0-9_]*)",
 		"beginCaptures": {
-		  "1": { "name": "keyword.declaration.zlang" },
+		  "1": { "name": "keyword.declaration.function.zlang" },
 		  "2": { "name": "entity.name.function.zlang" }
 		},
 		"end": "(?i)(?=FIN(?:\\s*;|\\s*(?:FONCTION|ACTION)|\\Z))",
@@ -88,10 +124,21 @@
 	  {
 		"begin": "\\b(ACTION|ACTIONS)\\s+([A-Za-z_][A-Za-z0-9_]*)",
 		"beginCaptures": {
-		  "1": { "name": "keyword.declaration.zlang" },
+		  "1": { "name": "keyword.declaration.function.zlang" },
 		  "2": { "name": "entity.name.action.zlang" }
 		},
 		"end": "(?i)(?=FIN(?:\\s*;|\\s*(?:FONCTION|ACTION)|\\Z))",
+		"patterns": [
+		  { "include": "$self" }
+		]
+	  },
+	  {
+		"begin": "\\b(UNE|UN)\\s+(FONCTION|ACTION)\\s+",
+		"beginCaptures": {
+		  "1": { "name": "storage.modifier.type.zlang" },
+		  "2": { "name": "keyword.declaration.function.zlang" }
+		},
+		"end": "(?=;)",
 		"patterns": [
 		  { "include": "$self" }
 		]
@@ -101,26 +148,26 @@
 		"match": "\\b\\d+\\b"
 	  },
 	  {
-		 "name": "string.quoted.double.zlang",
-		 "begin": "\"",
-		 "end": "\"",
-		 "patterns": [
-		   {
-			 "name": "constant.character.escape.zlang",
-			 "match": "\\\\."
-		   }
-		 ]
+		"name": "string.quoted.double.zlang",
+		"begin": "\"",
+		"end": "\"",
+		"patterns": [
+		  {
+			"name": "constant.character.escape.zlang",
+			"match": "\\\\."
+		  }
+		]
 	  },
-	   {
-		 "name": "string.quoted.single.zlang",
-		 "begin": "'",
-		 "end": "'",
-		 "patterns": [
-		   {
-			 "name": "constant.character.escape.zlang",
-			 "match": "\\\\."
-		   }
-		 ]
+	  {
+		"name": "string.quoted.single.zlang",
+		"begin": "'",
+		"end": "'",
+		"patterns": [
+		  {
+			"name": "constant.character.escape.zlang",
+			"match": "\\\\."
+		  }
+		]
 	  },
 	  {
 		"name": "punctuation.separator.comma.zlang",
