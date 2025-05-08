@@ -1,6 +1,6 @@
 # FROM L'ESI, TO L'ESI 
 
-
+08.05.2025 -- fixed issues and added French Support (full)
 
 
 # Z Language Support
@@ -25,4 +25,4 @@ Just open any `.alg` file, and you'll get highlighting and support.
 ## Author
 Moulahene Abdelmounaim 2025 — [GitHub](https://github.com/moulahcene26)
 ig : @blorf26
-0.1.0
+0.1.3

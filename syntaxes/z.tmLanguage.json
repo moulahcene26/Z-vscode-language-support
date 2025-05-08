@@ -23,20 +23,24 @@
 		}
 	  },
 	  {
+		"name": "comment.line.double-slash.zlang",
+		"match": "//.*$"
+	  },
+	  {
 		"name": "keyword.control.zlang",
-		"match": "\\b(IF|ELSE|ENDIF|WHILE|ENDWHILE|WH|EWH|FOR|ENDFOR|EFOR|CALL|BEGIN|END|LET)\\b"
+		"match": "\\b(IF|ELSE|ENDIF|SI|SINON|FSI|WHILE|ENDWHILE|WH|EWH|TANTQUE|FTQ|TQ|FOR|ENDFOR|EFOR|POUR|FINPOUR|FPOUR|CALL|APPEL|BEGIN|END|DEBUT|FIN|LET)\\b"
 	  },
 	  {
 		"name": "keyword.declaration.zlang",
-		"match": "\\b(ACTION|ACTIONS|FUNCTION|FUNCTIONS|POINTER|TO|OF|STRUCTURE|ARRAY|ARRAYS|LIST|LISTS|BILIST|QUEUE|QUEUES|STACK|STACKS|BST|MST|FILE|HEADER|BUFFER|DYNAMIC)\\b"
+		"match": "\\b(ACTION|ACTIONS|FUNCTION|FUNCTIONS|FONCTION|FONCTIONS|POINTER|TO|VERS|OF|DE|STRUCTURE|STRUCTURES|ARRAY|ARRAYS|TABLEAU|TABLEAUX|LIST|LISTS|LISTE|LISTES|BILIST|QUEUE|QUEUES|FILE|FILES|STACK|STACKS|PILE|PILES|BST|MST|HEADER|BUFFER|DYNAMIC|SOIT|SOIENT|ARB|VECTEUR|VECTEURS|UN|UNE|DES)\\b"
 	  },
 	  {
 		"name": "storage.type.zlang",
-		"match": "\\b(INTEGER|INTEGERS|BOOLEAN|BOOLEANS|CHAR|CHARACTER|CHARACTERS|STRING|STRINGS|CHAINE|CHAINES)\\b"
+		"match": "\\b(INTEGER|INTEGERS|ENTIER|ENTIERS|BOOLEAN|BOOLEANS|BOOLEEN|BOOLEENS|CHAR|CHARACTER|CHARACTERS|CAR|STRING|STRINGS|CHAINE|CHAINES|POINTEUR|LISTE|PILE|FILE)\\b"
 	  },
 	  {
 		"name": "constant.language.zlang",
-		"match": "\\b(TRUE|FALSE|NULL|NIL)\\b"
+		"match": "\\b(TRUE|FALSE|VRAI|FAUX|NULL|NIL)\\b"
 	  },
 	  {
 		"name": "keyword.operator.assignment.zlang",
@@ -48,7 +52,7 @@
 	  },
 	  {
 		"name": "keyword.operator.logical.zlang",
-		"match": "\\b(AND|OR|NOT)\\b"
+		"match": "\\b(AND|OR|NOT|ET|OU|NON)\\b"
 	  },
 	  {
 		"name": "keyword.operator.arithmetic.zlang",
@@ -56,11 +60,11 @@
 	  },
 	  {
 		"name": "support.function.builtin.zlang",
-		"match": "\\b(MOD|MAX|MIN|EXP|RANDNUMBER|RANDSTRING|ALEANUMBER|ALEACHAINE|CHARACT|LENTHSTRING|STRINGLENGTH)\\b"
+		"match": "\\b(MOD|MAX|MIN|EXP|RANDNUMBER|RANDSTRING|ALEANUMBER|ALEACHAINE|ALEANOMBRE|CHARACT|LENTHSTRING|STRINGLENGTH|HAUTEUR|HEIGHT)\\b"
 	  },
 	  {
 		"name": "support.function.highlevel.zlang",
-		"match": "\\b(CREATE_LIST|CREATE_BILIST|CREATE_STACK|CREATE_QUEUE|CREER_QUEUE|CREATE_BST|CREATE_MST|CREATE_FILE|CREATE_ARB|CREATE_ARM|CREATE_PILE|INIT_STRUCT|INIT_ARRAY|INIT_VECT|CREATE-LISTE|CREER_LISTE|CREER_LISTEBI|CREER_ARB|CREER_ARM|CREER_PILE|CREERFILE|INIT_TAB|ALLOCATE|ALLOUER|CREERNOEUD)\\b"
+		"match": "\\b(CREATE_LIST|CREATE_BILIST|CREATE_STACK|CREATE_QUEUE|CREER_QUEUE|CREATE_BST|CREATE_MST|CREATE_FILE|CREATE_ARB|CREATE_ARM|CREATE_PILE|INIT_STRUCT|INIT_ARRAY|INIT_VECT|CREATE-LISTE|CREER_LISTE|CREER_LISTEBI|CREER_ARB|CREER_ARM|CREER_PILE|CREERFILE|INIT_TAB|ALLOCATE|ALLOUER|CREERNOEUD|createlist|FREE_TREE|FREE_LIST|FREE_STACK|APPEND|GEN_BST|LIST_INORDER|VERIF_BST|RESETVISITED|COPYBST|PRINTGIVENLEVELDG|PRINTGIVENLEVELGD|DELETEGIVENLEVELDG|DELETEGIVENLEVELGD|NODES_LIST_LR|NODES_LIST_RL|COMPARE_LISTS|TOP1)\\b"
 	  },
 	  {
 		"name": "support.function.adt.zlang",
@@ -71,23 +75,23 @@
 		"match": "\\b(READ|WRITE|LIRE|ECRIRE)\\b"
 	  },
 	  {
-		"begin": "\\b(FUNCTION)\\s+([A-Za-z][A-Za-z0-9_]*)",
+		"begin": "\\b(FUNCTION|FONCTION)\\s+([A-Za-z_][A-Za-z0-9_]*)",
 		"beginCaptures": {
 		  "1": { "name": "keyword.declaration.zlang" },
 		  "2": { "name": "entity.name.function.zlang" }
 		},
-		"end": "(?=END)", 
+		"end": "(?i)(?=FIN(?:\\s*;|\\s*(?:FONCTION|ACTION)|\\Z))",
 		"patterns": [
-		  { "include": "$self" } 
+		  { "include": "$self" }
 		]
 	  },
 	  {
-		"begin": "\\b(ACTION)\\s+([A-Za-z][A-Za-z0-9_]*)",
+		"begin": "\\b(ACTION|ACTIONS)\\s+([A-Za-z_][A-Za-z0-9_]*)",
 		"beginCaptures": {
 		  "1": { "name": "keyword.declaration.zlang" },
 		  "2": { "name": "entity.name.action.zlang" }
 		},
-		"end": "(?=END)",
+		"end": "(?i)(?=FIN(?:\\s*;|\\s*(?:FONCTION|ACTION)|\\Z))",
 		"patterns": [
 		  { "include": "$self" }
 		]
@@ -148,7 +152,7 @@
 	  },
 	  {
 		"name": "variable.other.zlang",
-		"match": "\\b[A-Za-z][A-Za-z0-9_]*\\b"
+		"match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b"
 	  }
 	],
 	"repository": {}

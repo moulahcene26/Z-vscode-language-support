@@ -3,7 +3,7 @@
   "publisher": "moulahcene26",
   "displayName": "Z Language Support (ESI)",
   "description": "Z Language support: syntax highlighting and more",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "engines": {
     "vscode": "^1.70.0"
   },
