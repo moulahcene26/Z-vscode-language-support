@@ -35,12 +35,20 @@
 		"match": "\\b(UN|UNE|DES)\\b"
 	  },
 	  {
-		"name": "keyword.control.flow.zlang",
-		"match": "\\b(IF|ELSE|ENDIF|SI|SINON|FSI|WHILE|ENDWHILE|WH|EWH|TANTQUE|FTQ|TQ|FOR|ENDFOR|EFOR|POUR|FINPOUR|FPOUR)\\b"
+		"name": "keyword.control.block.begin.zlang",
+		"match": "\\b(SI|IF|TANTQUE|TQ|WHILE|WH|POUR|FOR|DEBUT|BEGIN)\\b"
 	  },
 	  {
-		"name": "keyword.control.zlang",
-		"match": "\\b(CALL|APPEL|BEGIN|END|DEBUT|FIN|LET)\\b"
+		"name": "keyword.control.block.end.zlang",
+		"match": "\\b(FSI|ENDIF|FTQ|ENDWHILE|EWH|FINPOUR|FPOUR|ENDFOR|EFOR|FIN|END)\\b"
+	  },
+	  {
+		"name": "keyword.control.conditional.zlang",
+		"match": "\\b(SINON|ELSE)\\b"
+	  },
+	  {
+		"name": "keyword.control.other.zlang",
+		"match": "\\b(CALL|APPEL|LET)\\b"
 	  },
 	  {
 		"name": "storage.type.structure.zlang",
@@ -92,7 +100,7 @@
 	  },
 	  {
 		"name": "support.function.builtin.zlang",
-		"match": "\\b(MOD|MAX|MIN|EXP|RANDNUMBER|RANDSTRING|ALEANUMBER|ALEACHAINE|ALEANOMBRE|CHARACT|LENTHSTRING|STRINGLENGTH|HAUTEUR|HEIGHT)\\b"
+		"match": "\\b(MOD|MAX|MIN|EXP|RANDNUMBER|RANDSTRING|ALEANUMBER|ALEACHAINE|ALEANOMBRE|ALEAENTIER|CARACT|LONGCHAINE|LENTHSTRING|STRINGLENGTH|HAUTEUR|HEIGHT)\\b"
 	  },
 	  {
 		"name": "keyword.declaration.function.zlang",
@@ -116,7 +124,11 @@
 		  "1": { "name": "keyword.declaration.function.zlang" },
 		  "2": { "name": "entity.name.function.zlang" }
 		},
-		"end": "(?i)(?=FIN(?:\\s*;|\\s*(?:FONCTION|ACTION)|\\Z))",
+		"end": "(?i)(FIN|END)(\\s*(FUNCTION|FONCTION|ACTION)?)(?=\\s*(?:;|\\Z))",
+		"endCaptures": {
+			"1": { "name": "keyword.control.block.end.zlang" },
+			"2": { "name": "keyword.declaration.function.zlang" }
+		},
 		"patterns": [
 		  { "include": "$self" }
 		]
@@ -127,7 +139,11 @@
 		  "1": { "name": "keyword.declaration.function.zlang" },
 		  "2": { "name": "entity.name.action.zlang" }
 		},
-		"end": "(?i)(?=FIN(?:\\s*;|\\s*(?:FONCTION|ACTION)|\\Z))",
+		"end": "(?i)(FIN|END)(\\s*(FUNCTION|FONCTION|ACTION)?)(?=\\s*(?:;|\\Z))",
+		"endCaptures": {
+			"1": { "name": "keyword.control.block.end.zlang" },
+			"2": { "name": "keyword.declaration.function.zlang" }
+		},
 		"patterns": [
 		  { "include": "$self" }
 		]
@@ -203,4 +219,4 @@
 	  }
 	],
 	"repository": {}
-  }
+}
