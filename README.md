@@ -1,6 +1,6 @@
 # FROM L'ESI, TO L'ESI 
 
-11.05.2025 -- More functions support
+15.05.2025 -- Auto Completion
 
 
 # Z Language Support
@@ -25,4 +25,4 @@ Just open any `.alg` file, and you'll get highlighting and support.
 ## Author
 Moulahene Abdelmounaim 2025 — [GitHub](https://github.com/moulahcene26)
 ig : @blorf26
-0.1.4
+0.1.5

@@ -29,59 +29,87 @@
 	  {
 		"name": "keyword.declaration.var.zlang",
 		"match": "\\b(SOIT|SOIENT|LET)\\b"
+		,
+      "flags": "i"
 	  },
 	  {
 		"name": "storage.modifier.type.zlang",
 		"match": "\\b(UN|UNE|DES)\\b"
+		,
+      "flags": "i"
 	  },
 	  {
 		"name": "keyword.control.block.begin.zlang",
 		"match": "\\b(SI|IF|TANTQUE|TQ|WHILE|WH|POUR|FOR|DEBUT|BEGIN)\\b"
-	  },
+		,
+      "flags": "i"
+	},
 	  {
 		"name": "keyword.control.block.end.zlang",
 		"match": "\\b(FSI|ENDIF|FTQ|ENDWHILE|EWH|FINPOUR|FPOUR|ENDFOR|EFOR|FIN|END)\\b"
-	  },
+		,
+      "flags": "i"
+	},
 	  {
 		"name": "keyword.control.conditional.zlang",
 		"match": "\\b(SINON|ELSE)\\b"
+		,
+      "flags": "i"
 	  },
 	  {
 		"name": "keyword.control.other.zlang",
 		"match": "\\b(CALL|APPEL|LET)\\b"
+		,
+      "flags": "i"
 	  },
 	  {
 		"name": "storage.type.structure.zlang",
 		"match": "\\b(STRUCTURE|STRUCTURES)\\b"
+		,
+      "flags": "i"
 	  },
 	  {
 		"name": "keyword.declaration.pointer.zlang",
 		"match": "\\b(POINTER|VERS|TO|POINTEUR)\\b"
+		,
+      "flags": "i"
 	  },
 	  {
 		"name": "storage.type.collection.zlang",
 		"match": "\\b(ARRAY|ARRAYS|TABLEAU|TABLEAUX|LIST|LISTS|LISTE|LISTES|BILIST|QUEUE|QUEUES|FILE|FILES|STACK|STACKS|PILE|PILES|VECTEUR|VECTEURS)\\b"
-	  },
+		,
+      "flags": "i"
+	},
 	  {
 		"name": "storage.type.tree.zlang",
 		"match": "\\b(BST|MST|ARB|HEADER|BUFFER|DYNAMIC)\\b"
-	  },
+		,
+      "flags": "i"
+	},
 	  {
 		"name": "storage.modifier.of.zlang",
 		"match": "\\b(OF|DE)\\b"
-	  },
+		,
+      "flags": "i"
+		},
 	  {
 		"name": "storage.type.primitive.zlang",
 		"match": "\\b(INTEGER|INTEGERS|ENTIER|ENTIERS|BOOLEAN|BOOLEANS|BOOLEEN|BOOLEENS|CHAR|CHARACTER|CHARACTERS|CAR|STRING|STRINGS|CHAINE|CHAINES)\\b"
-	  },
+		,
+      "flags": "i"
+	},
 	  {
 		"name": "constant.language.boolean.zlang",
 		"match": "\\b(TRUE|FALSE|VRAI|FAUX)\\b"
-	  },
+		,
+      "flags": "i"
+		},
 	  {
 		"name": "constant.language.null.zlang",
 		"match": "\\b(NULL|NIL)\\b"
-	  },
+		,
+      "flags": "i"
+	},
 	  {
 		"name": "keyword.operator.assignment.zlang",
 		"match": ":="
@@ -93,7 +121,9 @@
 	  {
 		"name": "keyword.operator.logical.zlang",
 		"match": "\\b(AND|OR|NOT|ET|OU|NON)\\b"
-	  },
+		,
+      "flags": "i"
+	},
 	  {
 		"name": "keyword.operator.arithmetic.zlang",
 		"match": "\\+|-|\\*|/"
@@ -101,23 +131,33 @@
 	  {
 		"name": "support.function.builtin.zlang",
 		"match": "\\b(MOD|MAX|MIN|EXP|RANDNUMBER|RANDSTRING|ALEANUMBER|ALEACHAINE|ALEANOMBRE|ALEAENTIER|CARACT|LONGCHAINE|LENTHSTRING|STRINGLENGTH|HAUTEUR|HEIGHT)\\b"
-	  },
+		,
+      "flags": "i"
+	},
 	  {
 		"name": "keyword.declaration.function.zlang",
 		"match": "\\b(ACTION|ACTIONS|FUNCTION|FUNCTIONS|FONCTION|FONCTIONS)\\b"
-	  },
+		,
+      "flags": "i"
+	},
 	  {
 		"name": "support.function.adt.zlang",
 		"match": "\\b(ADD|RAJOUTER|ALLOCATE_CELL|ALLOCATE_NODE|ALLOC_ARRAY|ALLOC_BLOCK|ALLOC_STRUCT|FREE|LIBERER|FREE_ARRAY|LIBER_TAB|FREE_NODE|LIBERERNOEUD|FREE_STRUCT|LIBER_STRUCT|CELL_VALUE|VALUE|VALEUR|NEXT|SUIVANT|PREVIOUS|PRECEDENT|ASS_ADR|AFF_ADR|ASS_VAL|AFF_VAL|ASS_L_ADR|AFF_ADRG|ASS_R_ADR|AFF_ADRD|PUSH|EMPILER|POP|DEPILER|EMPTY_STACK|PILEVIDE|CREATESTACK|CREERPILE|ENQUEUE|ENFILER|DEQUEUE|DEFILER|EMPTY_QUEUE|FILEVIDE|CREATEQUEUE|LC|FG|RC|FD|PARENT|PERE|NODE_VALUE|INFO|ASS_LC|AFF_FG|ASS_RC|AFF_FD|ASS_PARENT|AFF_PERE|ASS_NODE_VAL|AFF_INFO|CHILD|FILS|NODE_VALUE_MST|INFOR|ASS_CHILD|AFF_FILS|ASS_NODE_VAL_MST|AFF_INFOR|DEGREE|DEGRE|ASS_DEGREE|AFF_DEGRE|AFF_PARENT|ELEMENT|ASS_ELEMENT|AFF_ELEMENT|STRUCT|ASS_STRUCT|AFF_STRUCT|OPEN|OUVRIR|CLOSE|FERMER|READSEQ|LIRESEQ|WRITESEQ|ECRIRESEQ|READDIR|LIREDIR|WRITEDIR|ECRIREDIR|ENDFILE|FINFICH|ALLOC_BLOCK|ALLOC_BLOC|ASS_HEADER|AFF_ENTETE|HEADSEQ)\\b"
-	  },
+		,
+      "flags": "i"
+	},
 	  {
 		"name": "support.function.highlevel.zlang",
 		"match": "\\b(CREATE_LIST|CREATE_BILIST|CREATE_STACK|CREATE_QUEUE|CREER_QUEUE|CREATE_BST|CREATE_MST|CREATE_FILE|CREATE_ARB|CREATE_ARM|CREATE_PILE|INIT_STRUCT|INIT_ARRAY|INIT_VECT|CREATE-LISTE|CREER_LISTE|CREER_LISTEBI|CREER_ARB|CREER_ARM|CREER_PILE|CREERFILE|INIT_TAB|ALLOCATE|ALLOUER|CREERNOEUD|createlist|FREE_TREE|FREE_LIST|FREE_STACK|APPEND|GEN_BST|LIST_INORDER|VERIF_BST|RESETVISITED|COPYBST|PRINTGIVENLEVELDG|PRINTGIVENLEVELGD|DELETEGIVENLEVELDG|DELETEGIVENLEVELGD|NODES_LIST_LR|NODES_LIST_RL|COMPARE_LISTS|TOP1)\\b"
-	  },
+		,
+      "flags": "i"
+	},
 	  {
 		"name": "keyword.io.zlang",
 		"match": "\\b(READ|WRITE|LIRE|ECRIRE)\\b"
-	  },
+		,
+      "flags": "i"
+		},
 	  {
 		"begin": "\\b(FUNCTION|FONCTION)\\s+([A-Za-z_][A-Za-z0-9_]*)",
 		"beginCaptures": {
